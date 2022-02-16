@@ -8,4 +8,5 @@ import lombok.Setter;
 public class GroupDto {
     private int userId;
     private String groupName;
+    private int groupStrength;
 }
