@@ -45,7 +45,6 @@ public class GroupService {
 
     public Groups DTOtoEntity(GroupDto groupDto,Groups group){
         group.setGroupName(groupDto.getGroupName());
-        group.setGroupStrength(groupDto.getStrength());
         if(!userRepository.existsById(groupDto.getUserId()))
             throw new IllegalArgumentException("No such user exists");
         Person appUser=this.userRepository.findById(groupDto.getUserId());
@@ -53,6 +52,6 @@ public class GroupService {
         return this.groupRepository.save(group);
     }
 }
-//gitHub
+
 //docker
 

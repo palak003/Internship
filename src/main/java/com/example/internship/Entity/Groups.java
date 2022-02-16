@@ -12,7 +12,6 @@ public class Groups {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int groupId;
     private String groupName;
-    private int groupStrength;
     @ManyToOne
     @JoinColumn(name="userId")
     private Person person;
