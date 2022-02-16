@@ -16,6 +16,8 @@ public class UserService {
     private UserRepository userRepository;
 
     public Person createUser(UserDto userDto) {
+        if(userRepository.existsByEmailId(userDto.getEmailId()))
+            throw new IllegalArgumentException("User already exists by this email id");
         Person appUser=new Person();
         return DTOtoEntity(userDto,appUser);
     }
@@ -69,3 +71,4 @@ public class UserService {
         return phoneNumber.length() == 10;
     }
 }
+

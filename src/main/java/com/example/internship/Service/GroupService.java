@@ -7,7 +7,6 @@ import com.example.internship.Repository.GroupRepository;
 import com.example.internship.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -54,7 +53,6 @@ public class GroupService {
         return this.groupRepository.save(group);
     }
 }
-//swagger
 //gitHub
 //docker
 
